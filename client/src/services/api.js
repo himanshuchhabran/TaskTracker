@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api'; 
+const API_URL = 'http://localhost:3000/api'; 
 
 const api = axios.create({
   baseURL: API_URL,
@@ -22,8 +22,10 @@ api.interceptors.request.use(
 );
 
 export const register = (userData) => api.post('/auth/register', userData);
+
 export const login = (userData) => api.post('/auth/login', userData);
 export const getTasks = (query = '') => api.get(`/tasks${query}`);
+
 export const createTask = (taskData) => api.post('/tasks', taskData);
 export const updateTask = (id, taskData) => api.put(`/tasks/${id}`, taskData);
 export const deleteTask = (id) => api.delete(`/tasks/${id}`);
