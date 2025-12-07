@@ -20,13 +20,11 @@ Follow these steps to get the application running locally.
 
 1.Clone the Repository
 
-2.
-**cd server 
+2**cd server 
 **npm install
 **Change .env.example file with .env and enter your credentials.
 **npm run dev
 
-3.
-**cd client 
+3**cd client 
 **npm install
 **npm run dev
